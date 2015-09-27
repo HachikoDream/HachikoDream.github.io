@@ -4,7 +4,7 @@
   <subtitle><![CDATA[a self world]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-09-27T07:25:38.000Z</updated>
+  <updated>2015-09-27T07:50:24.834Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,13 +15,12 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title><![CDATA[Retrofit使用方法说明]]></title>
     <link href="http://yoursite.com/2015/09/27/Retrofit%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E8%AF%B4%E6%98%8E/"/>
     <id>http://yoursite.com/2015/09/27/Retrofit使用方法说明/</id>
-    <published>2015-09-27T07:26:25.942Z</published>
-    <updated>2015-09-27T07:25:38.000Z</updated>
-    <content type="html"><![CDATA[<p>##Retrofit使用方法说明</p>
-<ol>
+    <published>2015-09-27T07:49:29.000Z</published>
+    <updated>2015-09-27T07:50:24.834Z</updated>
+    <content type="html"><![CDATA[<ol>
 <li>简介<br>Retrofit是一个轻量级的REST CLIENT，可以很容易地实现一个Restful风格的http客户端。具体细节使用方法可以查看官方文档。你们还没学计算机网络，所以你们分三步走：<br>先看http协议大概介绍，再看REST是怎么回事，最后看Android上是怎么利用Retrofit框架来实现的REST。下面是介绍的链接，没必要看太细，边做边学。<br><a href="http://www.cnblogs.com/li0803/archive/2008/11/03/1324746.html" target="_blank" rel="external">http协议介绍</a><br><a href="http://www.zhihu.com/question/28557115/answer/48094438?utm_campaign=webshare&amp;utm_source=weibo&amp;utm_medium=zhihu" target="_blank" rel="external">REST介绍</a><br><a href="http://square.github.io/retrofit/" target="_blank" rel="external">Retrofit官方地址</a></li>
 <li>特点<br>这个框架是与你们上次开发超市项目中用到的Volley框架相对应的，都是负责http通信的。这个用起来应该是更加简单清晰一点的。</li>
 </ol>
@@ -84,10 +83,13 @@
 </ol>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>##Retrofit使用方法说明</p>
-<ol>
-<li>简介<br>Retrofit是一个轻量级的REST CLIENT，可以很容易地实现一个Restful风格的http客户端。具体细节使用方法可以查看官方文档。你们还没学计算机网络，所以你们分三步走：<br>先看htt]]>
+    <![CDATA[<ol>
+<li>简介<br>Retrofit是一个轻量级的REST CLIENT，可以很容易地实现一个Restful风格的http客户端。具体细节使用方法可以查看官方文档。你们还没学计算机网络，所以你们分三步走：<br>先看http协议大概介绍，再看REST是怎么回事，最后看A]]>
     </summary>
+    
+      <category term="Android，http" scheme="http://yoursite.com/tags/Android%EF%BC%8Chttp/"/>
+    
+      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
     
   </entry>
   
