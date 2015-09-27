@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Wells-Dreamspace</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="##Retrofit使用方法说明
+
+简介Retrofit是一个轻量级的REST CLIENT，可以很容易地实现一个Restful风格的http客户端。具体细节使用方法可以查看官方文档。你们还没学计算机网络，所以你们分三步走：先看http协议大概介绍，再看REST是怎么回事，最后看Android上是怎么利用Retrofit框架来实现的REST。下面是介绍的链接，没必要看太细，边做边学。http协议介">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Wells-Dreamspace">
+<meta property="og:url" content="http://yoursite.com/2015/09/27/Retrofit使用方法说明/index.html">
+<meta property="og:site_name" content="Wells-Dreamspace">
+<meta property="og:description" content="##Retrofit使用方法说明
+
+简介Retrofit是一个轻量级的REST CLIENT，可以很容易地实现一个Restful风格的http客户端。具体细节使用方法可以查看官方文档。你们还没学计算机网络，所以你们分三步走：先看http协议大概介绍，再看REST是怎么回事，最后看Android上是怎么利用Retrofit框架来实现的REST。下面是介绍的链接，没必要看太细，边做边学。http协议介">
+<meta property="og:image" content="http://yoursite.com/./1443287045175.png">
+<meta property="og:image" content="http://yoursite.com/./1443287401310.png">
+<meta property="og:image" content="http://yoursite.com/./1443287708976.png">
+<meta property="og:updated_time" content="2015-09-27T07:25:38.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Wells-Dreamspace">
+<meta name="twitter:description" content="##Retrofit使用方法说明
+
+简介Retrofit是一个轻量级的REST CLIENT，可以很容易地实现一个Restful风格的http客户端。具体细节使用方法可以查看官方文档。你们还没学计算机网络，所以你们分三步走：先看http协议大概介绍，再看REST是怎么回事，最后看Android上是怎么利用Retrofit框架来实现的REST。下面是介绍的链接，没必要看太细，边做边学。http协议介">
+  
+    <link rel="alternative" href="/atom.xml" title="Wells-Dreamspace" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Wells-Dreamspace</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">a self world</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Retrofit使用方法说明" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/09/27/Retrofit使用方法说明/" class="article-date">
+  <time datetime="2015-09-27T07:26:25.942Z" itemprop="datePublished">2015-09-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##Retrofit使用方法说明</p>
+<ol>
+<li>简介<br>Retrofit是一个轻量级的REST CLIENT，可以很容易地实现一个Restful风格的http客户端。具体细节使用方法可以查看官方文档。你们还没学计算机网络，所以你们分三步走：<br>先看http协议大概介绍，再看REST是怎么回事，最后看Android上是怎么利用Retrofit框架来实现的REST。下面是介绍的链接，没必要看太细，边做边学。<br><a href="http://www.cnblogs.com/li0803/archive/2008/11/03/1324746.html" target="_blank" rel="external">http协议介绍</a><br><a href="http://www.zhihu.com/question/28557115/answer/48094438?utm_campaign=webshare&amp;utm_source=weibo&amp;utm_medium=zhihu" target="_blank" rel="external">REST介绍</a><br><a href="http://square.github.io/retrofit/" target="_blank" rel="external">Retrofit官方地址</a></li>
+<li>特点<br>这个框架是与你们上次开发超市项目中用到的Volley框架相对应的，都是负责http通信的。这个用起来应该是更加简单清晰一点的。</li>
+</ol>
+<ul>
+<li>rest里面的两个核心要点是<strong>用URL定位资源</strong>和<strong>用http的method表示操作</strong>。在Retrofit中这两个核心的概念都是通过annotation来实现的，所以非常方便和快捷。</li>
+<li>我们数据的传送格式同样是json格式，不过在这里Retrofit利用google的gson包来将实体类与json格式的字符串进行互相转化，所有的请求和返回结果全部以实体类的形式存在，所以我们直接操作的只是实体类。</li>
+</ul>
+<ol>
+<li><p>使用方法<br>我已经在master分支上新建了包API，在其中我写好了APImanager类和UUservice接口。<br>具体写法都可以在我的superman项目中找到，注意写的时候一定要与后台的API文档相对应。</p>
+<ol>
+<li><p>按照API文档把api包中UUservice这个接口写完整，每一个api对应接口中的一个方法，在其中写清楚注释。我已经写了一个作为示例，更多的示例可以到superman项目中查看。写接口文件的注意事项：<br>(1)<img src="./1443287045175.png" alt="Alt text"></p>
+<pre><code>get方法+这种类型的url地址，在代码中直接写成这样：
+<span class="comment"><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">          <span class="variable">@GET</span>(<span class="string">"/user/&#123;user_id&#125;"</span>)</span><br><span class="line">void <span class="function">getCoursesByCatalog</span>(<span class="variable">@Path</span>(<span class="string">"user_id"</span>) String user_id</span><br></pre></td></tr></table></figure></span>
+</code></pre><p>get后面直接就写文档中的形式，其中在方法中用@Path参数来将url中的残缺量补全。<br>(2)<img src="./1443287401310.png" alt="Alt text"></p>
+<pre><code> 这种post方法的参数使用这种形式传递：
+ <span class="comment"><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">             <span class="variable">@POST</span>(<span class="string">"/user"</span>)</span><br><span class="line">void <span class="function">createAccessToken</span>(<span class="variable">@Body</span> LoginReq request, Callback&lt;LoginRes&gt; cb);</span><br></pre></td></tr></table></figure></span>
+
+其中@Body代表实际传递的参数，LoginReq是一个实体类，里面有文档中对应的几个属性。
+</code></pre><p>(3)<img src="./1443287708976.png" alt="Alt text"></p>
+<pre><code>get方法+这种方式的传参（不同于（1）中将参数写在路径中），在代码中写成这样：
+<span class="comment"><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> <span class="variable">@Get</span>(<span class="string">"/idle/list"</span>)</span><br><span class="line"><span class="function">checkSelfGoods</span>(<span class="variable">@Query</span>(<span class="string">"page"</span>) int page,<span class="variable">@Query</span>(<span class="string">"is_active"</span>) int is_active)</span><br></pre></td></tr></table></figure></span>
+
+       其中@Query后面跟上你要传的参数名，后面的变量代表你实际传递的参数值
+</code></pre><p>(4)<strong>在接口的每个方法中的最后一个参数统一为Callback类型的参数。</strong>每一个方法返回值都为void。这样做Retrofit会内部在新线程中执行请求操作，同时将结果回调到主线程中，便于UI的刷新操作（与Volley类似）。其中Callback泛型为api文档中规定的返回值对应的实体类,如果没有则写为Retrofit对应包中的Response类。           </p>
+</li>
+<li><p>在具体请求时的过程：</p>
+<ul>
+<li><p>调用<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- &#36890;&#36807; ```ApiManager.getService(getActivity().getApplicationContext())```&#26041;&#27861;&#26469;&#23454;&#20363;&#21270;&#19968;&#20010;&#23454;&#29616;&#20102;UUService&#25509;&#21475;&#30340;&#31867;&#65292;&#28982;&#21518;&#23601;&#21487;&#20197;&#32487;&#32493;&#35843;&#29992;&#31867;&#20013;&#30340;&#30456;&#24212;&#26041;&#27861;&#26469;&#36827;&#34892;&#19994;&#21153;&#22788;&#29702;&#12290;&#10;- &#26500;&#36896;&#25509;&#21475;&#26041;&#27861;&#22768;&#26126;&#20013;&#38656;&#35201;&#30340;&#21442;&#25968;&#65292;new&#19968;&#20010;Callback&#31867;&#22411;&#30340;&#23545;&#35937;&#20316;&#20026;&#26368;&#21518;&#19968;&#20010;&#21442;&#25968;&#20256;&#20837;&#12290;Callback&#31867;&#20013;&#26377;&#20004;&#20010;&#26041;&#27861;```success()```&#21644;```failure()```&#12290;&#65288;&#31867;&#27604;Volley&#65289;&#12290;```success()```&#20013;&#30340;&#31532;&#19968;&#20010;&#21442;&#25968;&#31867;&#22411;&#21363;&#20026;&#27867;&#22411;&#20013;&#30340;&#31867;&#22411;&#65292;&#20063;&#23601;&#26159;&#35828;&#20320;&#22312;&#36825;&#20010;&#20989;&#25968;&#20013;&#21487;&#20197;&#25343;&#21040;&#21518;&#21488;&#30340;&#22788;&#29702;&#32467;&#26524;&#65292;&#36825;&#37324;&#20320;&#21487;&#20197;&#23545;&#32467;&#26524;&#36827;&#34892;&#20648;&#23384;&#12289;&#26174;&#31034;&#25110;&#20854;&#20182;&#22788;&#29702;&#12290;&#31532;&#20108;&#20010;&#21442;&#25968;&#20026;Response&#19968;&#33324;&#29992;&#19981;&#21040;&#12290;```failure&#65288;&#65289;```&#20989;&#25968;&#26377;&#19968;&#20010;&#31867;&#22411;&#20026;RetrofitError&#31867;&#22411;&#30340;&#21442;&#25968;&#65292;&#36890;&#36807;&#23427;&#20320;&#21487;&#20197;&#25343;&#21040;&#21518;&#21488;&#36820;&#22238;&#30340;&#38169;&#35823;&#30721;&#65292;&#38169;&#35823;&#21407;&#22240;&#31561;&#20449;&#24687;&#12290;&#36825;&#37324;&#30452;&#25509;&#35843;&#29992;```showInnerError&#65288;&#65289;```&#20989;&#25968;&#21363;&#21487;&#12290;&#10;- &#19979;&#38754;&#26159;&#25105;superman&#39033;&#30446;&#20013;&#33719;&#21462;&#29992;&#25143;&#20313;&#39069;&#25805;&#20316;&#30340;&#23436;&#25972;&#35831;&#27714;&#36807;&#31243;&#20195;&#30721;&#65306;&#10; &#62;</span><br></pre></td></tr></table></figure></p>
+<p>private void getUserBalance(){<br>toggleShowLoading(true,”正在加载中”);<br>if(NetUtils.isNetworkConnected(getActivity())){<br>  ApiManager.getService(getActivity().getApplicationContext()).getUserBalance(new Callback<balanceres>() {</balanceres></p>
+<pre><code><span class="annotation">@Override</span>
+<span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">success</span><span class="params">(BalanceRes balanceRes, Response response)</span> </span>{
+    toggleShowLoading(<span class="keyword">false</span>,<span class="keyword">null</span>);
+    StringBuilder sb=<span class="keyword">new</span> StringBuilder();
+    sb.append(<span class="string">"￥"</span>);
+    sb.append((<span class="keyword">float</span>)balanceRes.getBalance()/(<span class="keyword">float</span>)<span class="number">100</span>);
+    balanceTv.setText(sb.toString());
+}
+<span class="annotation">@Override</span>
+<span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">failure</span><span class="params">(RetrofitError <span class="keyword">error</span>)</span> </span>{
+    toggleShowLoading(<span class="keyword">false</span>,<span class="keyword">null</span>);
+    ErrorRes res= (ErrorRes) <span class="keyword">error</span>.getBodyAs(ErrorRes.class);
+    toggleShowError(<span class="keyword">true</span>, res.getReason(), <span class="keyword">new</span> View.OnClickListener() {
+        <span class="annotation">@Override</span>
+        <span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View v)</span> </span>{
+            getUserBalance();
+        }
+    });
+}
+</code></pre><p>  });<br>}else{<br>  toggleNetworkError(true, new View.OnClickListener() {</p>
+<pre><code><span class="annotation">@Override</span>
+<span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View v)</span> </span>{
+    getUserBalance();
+}
+</code></pre><p>  });<br>}<br>}<br>```</p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/09/27/Retrofit使用方法说明/" data-id="cif276oyf00019kumwobz92at" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/09/27/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  
+    
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">九月 2015</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2015/09/27/Retrofit使用方法说明/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2015/09/27/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 Wells<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>
